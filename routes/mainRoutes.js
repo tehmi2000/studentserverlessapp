@@ -108,21 +108,41 @@ const model = function() {
         });
     });
 
-    router.post("/student/create", function(req, res) {
+    router.post("/student/update/:id", function(req, res) {
         // LOG DETAILS ABOUT REQUEST MADE TO THIS ENDPOINT
         let options = {
             request: req,
             requestMethod: 'POST',
-            requestDescription: 'Create Student Data'
+            requestDescription: 'Update Student Data'
         };
 
         log(null, options);
 
-        // INSERT STUDENT DATA INTO DATABASE
         let userData = req.body;
-        let mySQLquery = `INSERT INTO student (uuid, firstname, lastname, email, phone) VALUES ('${genHex(16)}','${formatName(userData.firstname) || 'John'}', '${formatName(userData.lastname) || 'Doe'}', '${userData.email || 'example@email.com'}', '${userData.phone || '+1234567890'}')`;
 
-        // RUN MYSQL QUERY
+        let buildQuery = function(data){
+            let sqlquery = '';
+            let columnList = Object.keys(data);
+            let valueList = [];
+
+            // Assign the values of the data into the 'valueList' array...
+            columnList.forEach(columnName => {
+                valueList.push(data[columnName]);
+            });
+
+            // Map each value to the form >>> '<column name> = <column value>'
+            valueList.map((columnValue, index) => {
+                return `${columnList[index]}='${columnValue}'`;
+            });
+
+            sqlquery = `UPDATE student SET ${valueList.join(', ')} WHERE uuid='${req.params.id}'`;
+            return sqlquery;
+        };
+
+        // CREATE MYSQL QUERY FROM DATA
+        let mySQLquery = buildQuery(userData);
+
+        // UPDATE STUDENT DATA IN DATABASE
         connectToDB().query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
@@ -132,7 +152,9 @@ const model = function() {
             }else if(result){
                 // RETURN RESULT
                 res.status(200).json({
-                    message: result
+                    statusCode: 200,
+                    message: 'Student Record Updated Successfully',
+                    result
                 });
             }
         });
