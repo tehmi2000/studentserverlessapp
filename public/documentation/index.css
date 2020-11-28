@@ -15,11 +15,17 @@ main{
 }
 
 .highlight{
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    border-radius: 10px;
-    padding: 0.3rem 1rem;
-    background-color: rgba(255, 243, 68, 0.3);
+    /* display: inline; */
+    margin-right: 0.3rem;
+    margin-left: 0.2rem;
+    border-radius: 5px;
+    padding: 0.2rem 0.8rem;
+    background-color: rgba(253, 133, 133, 0.6);
+}
+
+.insig{
+    color: #858585;
+    font-size: 2rem;
 }
 
 .input-style+.error-alert{
@@ -39,6 +45,15 @@ main{
 
 .page-section h2{
     text-transform: lowercase;
+}
+
+.page-section-head ol{
+    margin: 0 auto;
+}
+
+.page-section-head li{
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
 .page-section summary{
