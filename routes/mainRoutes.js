@@ -47,6 +47,8 @@ const model = function() {
         res.status(200).redirect("./documentation/index.html");
     });
     
+
+    // STUDENT API STARTS HERE >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     router.get("/student", function(req, res) {
         // LOG DETAILS ABOUT REQUEST MADE TO THIS ENDPOINT
         let options = {
@@ -76,6 +78,36 @@ const model = function() {
         });
     });
     
+    router.post("/student/create", function(req, res) {
+        // LOG DETAILS ABOUT REQUEST MADE TO THIS ENDPOINT
+        let options = {
+            request: req,
+            requestMethod: 'POST',
+            requestDescription: 'Create Student Data'
+        };
+
+        log(null, options);
+
+        // INSERT STUDENT DATA INTO DATABASE
+        let userData = req.body;
+        let mySQLquery = `INSERT INTO student (uuid, firstname, lastname, email, phone) VALUES ('${genHex(16)}','${formatName(userData.firstname) || 'John'}', '${formatName(userData.lastname) || 'Doe'}', '${userData.email || 'example@email.com'}', '${userData.phone || '+1234567890'}')`;
+
+        // RUN MYSQL QUERY
+        connectToDB().query(mySQLquery, (err, result) => {
+            if (err) {
+                // LOG ERROR AND RETURN ERROR
+                log(err, {...options, logType: 'ERROR', requestDescription: 'Error'});
+                res.status(500).json({err});
+
+            }else if(result){
+                // RETURN RESULT
+                res.status(200).json({
+                    message: result
+                });
+            }
+        });
+    });
+
     router.post("/student/create", function(req, res) {
         // LOG DETAILS ABOUT REQUEST MADE TO THIS ENDPOINT
         let options = {

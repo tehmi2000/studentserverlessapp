@@ -14,6 +14,14 @@ main{
     background-color: #cecece;
 }
 
+.highlight{
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    background-color: rgba(255, 243, 68, 0.3);
+}
+
 .input-style+.error-alert{
     font-size: 1.1rem;
     text-transform: initial;
@@ -29,10 +37,6 @@ main{
     background-color: rgba(172, 255, 47, 0.65);
 }
 
-/* .page-section h2, .page-section-head h2{
-    text-transform: lowercase;
-} */
-
 .page-section h2{
     text-transform: lowercase;
 }
@@ -43,9 +47,8 @@ main{
     padding: 0.3rem 0.3rem;
 }
 
-.page-section .brief-text{
+.page-section-head .brief-text, .page-section-head .brief-text *, .page-section .brief-text, .page-section .brief-text *{
     font-size: 1.33rem;
-    text-transform: initial;
 }
 
 .page-section summary:hover{
