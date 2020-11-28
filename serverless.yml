@@ -1,0 +1,55 @@
+# Welcome to Serverless!
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+
+# app and org for use with dashboard.serverless.com
+service: studentserverlessapi
+app: studentserverlessapi-app
+org: tehmi2000
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  # timeout: 30
+  stage: dev
+  region: us-east-1
+  apiGateway:
+    shouldStartNameWithService: true
+
+# you can define service wide environment variables here
+  environment:
+    APP_STAGE: ${self:provider.stage}
+    MYSQL_USER: '${param: MYSQL_USER}'
+    MYSQL_PASS: '${param: MYSQL_PASS}'
+
+plugins:
+  - serverless-offline
+  # - serverless-plugin-custom-domain
+  # - serverless-domain-manager
+
+
+# custom:
+#   domain: 
+#     name: "api.temiassessment.com"
+#     basePath: v1
+
+functions:
+  app:
+    handler: server.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
+
+# hello:
+#   handler: handler.hello
+#   events:
+#     - http:
+#         path: users/create
+#         method: get
+
+#    Define function environment variables here
+#    environment:
+#      variable2: value2

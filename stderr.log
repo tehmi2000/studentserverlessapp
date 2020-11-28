@@ -1,0 +1,135 @@
+Sat, 28 Nov 2020 03:45:13 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:45:13 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 03:45:36 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:45:36 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 03:48:10 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:48:10 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 03:48:31 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:48:31 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 03:49:21 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:49:21 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 03:50:01 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:50:01 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 03:51:29 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:51:29 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 03:55:56 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:55:56 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 03:57:59 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 03:57:59 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/student",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: undefined Student Data",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}

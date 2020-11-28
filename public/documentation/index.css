@@ -1,0 +1,106 @@
+main{
+    justify-content: center;
+}
+
+.input-style{
+    width: 100%;
+    outline: none;
+    border: none;
+    display: block;
+    margin: 1rem 0 0.5rem;
+    /* border-bottom: 2px solid white; */
+    padding: 1.8rem 2rem;
+    border-radius: 3px;
+    background-color: #cecece;
+}
+
+.input-style+.error-alert{
+    font-size: 1.1rem;
+    text-transform: initial;
+    opacity: 0;
+    color: #d80d0d;
+    margin-bottom: 1rem;
+}
+
+.page-section .request-method{
+    margin-right: 1rem;
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    background-color: rgba(172, 255, 47, 0.65);
+}
+
+/* .page-section h2, .page-section-head h2{
+    text-transform: lowercase;
+} */
+
+.page-section h2{
+    text-transform: lowercase;
+}
+
+.page-section summary{
+    margin-top: 1rem;
+    outline: none !important;
+    padding: 0.3rem 0.3rem;
+}
+
+.page-section .brief-text{
+    font-size: 1.33rem;
+    text-transform: initial;
+}
+
+.page-section summary:hover{
+    cursor: pointer;
+}
+
+.page-section summary + .example-block{
+    text-transform: initial;
+    font-size: 1.5rem !important;
+    background-color: #3f3f40;
+    color: rgb(255, 230, 0);
+    padding: 2rem;
+    border-radius: 5px;
+    display: block;
+    margin-top: 0.8rem;
+    overflow: auto;
+    max-height: 400px;
+}
+
+.page-section summary + .example-block pre{
+    line-height: 2;
+}
+
+.page-section summary + .example-block .comment{
+    font-style: italic;
+    color: #8d8d8d;
+}
+
+@media only screen and (max-width:800px){
+    .navlinks{
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    /* .page-section{
+        width: 85%;
+    }
+
+    .page-section-head{
+        top: 0;
+        position: sticky;
+        padding: 1rem 3rem;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        border-radius: 0;
+        z-index: +200;
+    }
+
+    .page-section-head h2{
+        font-size: 1.6rem;
+        color: #d80d0d;
+    }
+
+    .page-section h2{
+        font-size: 1.8rem !important;
+    } */
+}
