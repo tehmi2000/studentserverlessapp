@@ -131,7 +131,7 @@ const model = function() {
             });
 
             // Map each value to the form >>> '<column name> = <column value>'
-            valueList.map((columnValue, index) => {
+            valueList = valueList.map((columnValue, index) => {
                 return `${columnList[index]}='${columnValue}'`;
             });
 

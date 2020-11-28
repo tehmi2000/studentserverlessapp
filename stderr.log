@@ -133,3 +133,33 @@ Sat, 28 Nov 2020 03:57:59 GMT  [INFO]: {
         "log": null
     }
 }
+Sat, 28 Nov 2020 20:08:56 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 20:08:56 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Sat, 28 Nov 2020 20:09:24 GMT  [INFO]: {
+    "timestamp": "Sat, 28 Nov 2020 20:09:24 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
