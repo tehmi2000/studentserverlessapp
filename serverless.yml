@@ -14,7 +14,7 @@ provider:
   name: aws
   runtime: nodejs12.x
   # timeout: 30
-  stage: dev
+  stage: production
   region: us-east-1
   apiGateway:
     shouldStartNameWithService: true
@@ -24,6 +24,7 @@ provider:
     APP_STAGE: ${self:provider.stage}
     MYSQL_USER: '${param: MYSQL_USER}'
     MYSQL_PASS: '${param: MYSQL_PASS}'
+    NODE_ENV: ${self:custom.secrets.NODE_ENV} 
 
 plugins:
   - serverless-offline
@@ -31,7 +32,8 @@ plugins:
   # - serverless-domain-manager
 
 
-# custom:
+custom:
+  secrets: ${file(secrets.json)}
 #   domain: 
 #     name: "api.temiassessment.com"
 #     basePath: v1
@@ -40,8 +42,12 @@ functions:
   app:
     handler: server.handler
     events:
-      - http: ANY /
-      - http: ANY /{proxy+}
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
 
 # hello:
 #   handler: handler.hello

@@ -44,7 +44,7 @@ const model = function() {
 
         log(null, options);
         
-        res.status(200).redirect("../documentation");
+        res.status(200).redirect("./documentation/index.html");
     });
     
     router.get("/student", function(req, res) {
