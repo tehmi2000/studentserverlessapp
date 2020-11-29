@@ -7,7 +7,7 @@ This project includes the following files and folders:
 - public - Static web pages.
 - configuration - Code for the application and database configuration.
 - routes - Route module used by express serve endpoints.
-- tests - Unit tests for the application code.
+- \_\_tests__ - Unit tests for the application code.
 
 ## About the application
 
@@ -39,7 +39,7 @@ Requirements:
 
 * Node.js - [Install Node.js 10](https://nodejs.org/en/), including the npm package management tool.
 
-Tests are defined in the tests__ folder in this project. Use `npm` to install the [Jest test framework](https://jestjs.io/) and run unit tests.
+Tests are defined in the \_\_tests__ folder in this project. Use `npm` to install the [Jest test framework](https://jestjs.io/) and run unit tests.
 
 ```bash
 my-application$ npm install
