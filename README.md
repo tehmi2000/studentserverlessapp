@@ -1,6 +1,6 @@
-# Codeweavers Assessment Project
+# Temiloluwa Assessment Submission
 
-This project contains source code and supporting files for the serverless application that I created in the AWS Lambda console. You can check it out on Github here: https://github.com/tehmi2000.
+This project contains source code and supporting files for the serverless application that I created in the AWS Lambda console. You can check it out on Github here: https://github.com/tehmi2000/studentserverlessapp.
 
 This project includes the following files and folders:
 
