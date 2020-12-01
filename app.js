@@ -24,3 +24,4 @@ app.use('/', require("./routes/mainRoutes"));
 
 // EXPORT HANDLER TO USE IN SERVERLESS.YML
 module.exports.handler = serverless(app);
+module.exports.app = app;
