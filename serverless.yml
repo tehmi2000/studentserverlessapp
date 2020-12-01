@@ -40,7 +40,7 @@ custom:
 
 functions:
   app:
-    handler: server.handler
+    handler: app.handler
     events:
       - http:
           path: /

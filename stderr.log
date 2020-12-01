@@ -163,3 +163,175 @@ Sat, 28 Nov 2020 20:09:24 GMT  [INFO]: {
         "log": null
     }
 }
+Tue, 01 Dec 2020 03:41:42 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 03:41:42 GMT",
+    "logType": "INFO",
+    "ip": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "errno": "ENOTFOUND",
+            "code": "ENOTFOUND",
+            "syscall": "getaddrinfo",
+            "hostname": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "host": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "fatal": true
+        }
+    }
+}
+Tue, 01 Dec 2020 03:47:34 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 03:47:34 GMT",
+    "logType": "INFO",
+    "ip": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "errno": "ENOTFOUND",
+            "code": "ENOTFOUND",
+            "syscall": "getaddrinfo",
+            "hostname": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "host": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "fatal": true
+        }
+    }
+}
+Tue, 01 Dec 2020 03:52:44 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 03:52:44 GMT",
+    "logType": "INFO",
+    "ip": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "errno": "ENOTFOUND",
+            "code": "ENOTFOUND",
+            "syscall": "getaddrinfo",
+            "hostname": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "host": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "fatal": true
+        }
+    }
+}
+Tue, 01 Dec 2020 03:58:49 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 03:58:49 GMT",
+    "logType": "INFO",
+    "ip": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Tue, 01 Dec 2020 04:00:42 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 04:00:42 GMT",
+    "logType": "INFO",
+    "ip": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Tue, 01 Dec 2020 04:01:01 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 04:01:01 GMT",
+    "logType": "INFO",
+    "ip": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "errno": "ENOTFOUND",
+            "code": "ENOTFOUND",
+            "syscall": "getaddrinfo",
+            "hostname": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "host": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "fatal": true
+        }
+    }
+}
+Tue, 01 Dec 2020 04:03:33 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 04:03:33 GMT",
+    "logType": "INFO",
+    "ip": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Tue, 01 Dec 2020 04:06:22 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 04:06:22 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/student",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+    "data": {
+        "action": "[GET]: undefined Student Data",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Tue, 01 Dec 2020 04:09:30 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 04:09:30 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/student",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+    "data": {
+        "action": "[GET]: undefined Student Data",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}
+Tue, 01 Dec 2020 04:10:01 GMT  [INFO]: {
+    "timestamp": "Tue, 01 Dec 2020 04:10:01 GMT",
+    "logType": "INFO",
+    "ip": "127.0.0.1",
+    "url": "/student",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+    "data": {
+        "action": "[GET]: undefined Student Data",
+        "body": {
+            "type": "Buffer",
+            "data": []
+        },
+        "log": null
+    }
+}

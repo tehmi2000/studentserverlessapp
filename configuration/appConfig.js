@@ -17,7 +17,8 @@ const model = function() {
                 body: null
             },
             requestMethod: 'GET',
-            requestDescription: 'No description for this request'
+            requestDescription: 'No description for this request',
+            logToConsole: true
         };
 
         // UPDATE DEFAULT CONFIG WITH USERS CONFIG
@@ -41,8 +42,8 @@ const model = function() {
 		fs.appendFile("./stderr.log", content, function(err) {
 			if(err) console.error(err);
 		});
-		
-		console.error(logContent);
+        
+        if(options.logToConsole === true && logContent !== null) console.error(logContent.message);
     };
 
     let connectToDB = function () {

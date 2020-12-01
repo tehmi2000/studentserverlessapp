@@ -2,12 +2,17 @@
   "name": "studentserverlessapi",
   "version": "1.0.0",
   "description": "",
-  "main": "handler.js",
+  "main": "app.js",
   "scripts": {
     "lint": "",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watchAll --detectOpenHandles"
   },
-  "keywords": [],
+  "keywords": [
+    "serverless",
+    "framework",
+    "expressJS",
+    "AWS"
+  ],
   "repository": {},
   "author": "Temiloluwa Ogunbanjo",
   "license": "ISC",
@@ -25,7 +30,8 @@
     "eslint": "^7.14.0",
     "jest": "^26.6.3",
     "serverless-domain-manager": "^5.1.0",
+    "serverless-offline": "^6.8.0",
     "serverless-plugin-custom-domain": "^2.0.4",
-    "serverless-offline": "^6.8.0"
+    "supertest": "^6.0.1"
   }
 }
