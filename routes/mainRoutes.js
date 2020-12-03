@@ -53,7 +53,7 @@ const model = function() {
         // LOG DETAILS ABOUT REQUEST MADE TO THIS ENDPOINT
         let options = {
             request: req,
-            requestDescription: `${(req.query)? req.query.limit : 'All'} Student Data`
+            requestDescription: `${(req.query && req.query.limit)? req.query.limit : 'All'} Student Data`
         };
 
         log(null, options);
@@ -66,7 +66,7 @@ const model = function() {
         connectToDB().query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
-                log(err, {...options, logType: 'ERROR', requestDescription: 'Error'});
+                log(err, {...options, logType: 'ERROR', requestDescription: 'Error connecting to MySQL'});
                 res.status(500).json({err});
 
             }else if(result){
@@ -96,7 +96,7 @@ const model = function() {
         connectToDB().query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
-                log(err, {...options, logType: 'ERROR', requestDescription: 'Error'});
+                log(err, {...options, logType: 'ERROR', requestDescription: 'Error connecting to MySQL'});
                 res.status(500).json({err});
 
             }else if(result){
@@ -146,7 +146,7 @@ const model = function() {
         connectToDB().query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
-                log(err, {...options, logType: 'ERROR', requestDescription: 'Error'});
+                log(err, {...options, logType: 'ERROR', requestDescription: 'Error connecting to MySQL'});
                 res.status(500).json({err});
 
             }else if(result){
@@ -172,13 +172,13 @@ const model = function() {
         
         // DELETE STUDENT DATA FROM DATABASE
         let studentId = req.params.id;
-        let mySQLquery = `DELETE FROM student WHERE uuid= '${studentId}'`;
+        let mySQLquery = `DELETE FROM student WHERE uuid='${studentId}'`;
 
         // RUN MYSQL QUERY
         connectToDB().query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
-                log(err, {...options, logType: 'ERROR', requestDescription: 'Error'});
+                log(err, {...options, logType: 'ERROR', requestDescription: 'Error connecting to MySQL'});
                 res.status(500).json({err});
 
             }else if(result){

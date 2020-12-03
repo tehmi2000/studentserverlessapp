@@ -1,22 +1,51 @@
+const request = require('supertest');
 // Import mysql
 const { connectToDB } = require('../../configuration/appConfig');
 // Import all functions from server
-const lambda = require('../../app');
+const { app } = require('../../app');
 
-describe("Test API", () => {
-    let mySQLConnection = null;
-    beforeAll(() => {
-        mySQLConnection = connectToDB();
+describe("Test API Documentation Routes", () => {
+
+    test('GET / is working', async () => {
+        const response = await request(app).get('/');
+        expect(response.statusCode).toBe(200);
+        expect(response.headers['content-type']).toBe('text/html; charset=UTF-8');
     });
 
-    afterAll(done => {
-
-    });
-
-    test('Home route is working', () => {
-        expect(mySQLConnection).not.toBeNull();
+    test('GET /docs is working', async () => {
+        const response = await request(app).get('/docs');
+        expect(response.statusCode).toBeGreaterThan(200);
+        expect(response.statusCode).toBeLessThan(400);
+        expect(response.headers['content-type']).toBe('text/html; charset=UTF-8');
     });
 });
+
+
+describe("Test Student API Endpoints", () => {
+    let mySQLConnection = null;
+
+    afterAll(done => {
+        mySQLConnection.close();
+    });
+
+    test('MySQL client is available and working', () => {
+        try {
+            mySQLConnection = connectToDB(false);
+        } catch (error) {
+            console.error(error);
+        }
+        expect(mySQLConnection).not.toBeNull();
+    });
+
+    test('Get all student data', async () => {
+        const response = await request(app).get('/student');
+        expect(response.statusCode).toBe(200);
+        expect(response.body).toEqual([]);
+    });
+});
+
+
+
 
 
 // This includes all tests for getAllItemsHandler

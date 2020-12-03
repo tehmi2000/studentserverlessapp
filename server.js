@@ -5,5 +5,5 @@ const PORT = (process.env.PORT === undefined || process.env.PORT === null || pro
 
 app.listen(PORT, '0.0.0.0', function(){
     console.log('Server Started!');
-    console.log(`Server is running on PORT=${PORT}`);
+    console.log(`Server is running on PORT:${PORT}`);
 });

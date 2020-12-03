@@ -9,26 +9,26 @@ const model = function() {
     const log = function(logContent, options) {
         // LOG DISPLAY CONFIGS
         let defaultOption = {
-            logType: 'INFO',
             request: {
-                ip: null,
+                IP: null,
                 url: null,
                 headers: {},
                 body: null
             },
             requestMethod: 'GET',
             requestDescription: 'No description for this request',
-            logToConsole: true
+            logToConsole: true,
+            logType: 'INFO'
         };
 
         // UPDATE DEFAULT CONFIG WITH USERS CONFIG
-        options = (options)? Object.assign({}, defaultOption, options) : defaultOption;
+        options = (options)? Object.assign(defaultOption, options) : defaultOption;
 
         // JSON CONTENT TO LOG
+        let timestamp = new Date().toUTCString();
         let requestLog = {
-            timestamp: new Date().toUTCString(),
             logType: options.logType,
-            ip: options.request.ip,
+            IP: options.request.IP,
             url: options.request.url,
             application: options.request.headers['user-agent'],
             data: {
@@ -38,7 +38,7 @@ const model = function() {
             }
         };
 
-		let content = `${requestLog.timestamp}  [${options.logType.toUpperCase()}]: ${JSON.stringify(requestLog, null, 4)}\n`;
+		let content = `${timestamp}  [${options.logType.toUpperCase()}]: ${JSON.stringify(requestLog, null, 4)}\n`;
 		fs.appendFile("./stderr.log", content, function(err) {
 			if(err) console.error(err);
 		});
@@ -46,10 +46,11 @@ const model = function() {
         if(options.logToConsole === true && logContent !== null) console.error(logContent.message);
     };
 
-    let connectToDB = function () {
+    let connectToDB = function (shouldLogError) {
+        shouldLogError = shouldLogError || true;
         mySqlConnection.connect(err => {
             if (err) {
-                log(err);
+                log(err, {logToConsole: shouldLogError});
                 return;
             }
             console.info("Connection to MySQL database was successful!");
