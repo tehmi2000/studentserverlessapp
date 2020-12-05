@@ -487,3 +487,497 @@ Wed, 02 Dec 2020 08:12:44 GMT  [ERROR]: {
         }
     }
 }
+Sat, 05 Dec 2020 16:55:33 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 16:55:34 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 16:55:34 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sat, 05 Dec 2020 16:55:44 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "errorno": "ETIMEDOUT",
+            "code": "ETIMEDOUT",
+            "syscall": "connect",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 16:55:44 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "errorno": "ETIMEDOUT",
+            "code": "ETIMEDOUT",
+            "syscall": "connect",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 16:56:42 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 16:56:42 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 16:56:42 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sat, 05 Dec 2020 16:56:44 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 16:56:44 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 16:56:53 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 16:56:53 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 16:56:53 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sat, 05 Dec 2020 16:56:54 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 16:56:54 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 16:57:09 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 16:57:09 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 16:57:09 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sat, 05 Dec 2020 16:57:10 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 16:57:10 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:02 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 17:00:02 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 17:00:02 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:03 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:03 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:23 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 17:00:23 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 17:00:23 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:24 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:24 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:33 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 17:00:33 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 17:00:33 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:34 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:34 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:43 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 17:00:43 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sat, 05 Dec 2020 17:00:43 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:44 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sat, 05 Dec 2020 17:00:44 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
