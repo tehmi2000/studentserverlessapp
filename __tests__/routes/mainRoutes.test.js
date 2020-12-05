@@ -49,7 +49,7 @@ describe("Test Student API Endpoints", () => {
         expect(mySQLConnection).not.toBeNull();
     });
 
-    test('Get all student data', async () => {
+    test('GET /student', async () => {
         try {
             const response = await request(app).get('/student');
             expect(response.statusCode).toBe(200);
@@ -58,10 +58,40 @@ describe("Test Student API Endpoints", () => {
             console.log(error);
         }
     });
+
+    test('GET /student: with optional limit parameter', async () => {
+        try {
+            let limit = 2;
+            const response = await request(app).get(`/student?limit=${limit}`);
+            expect(response.statusCode).toBe(200);
+            expect(response.body.length).toBe(limit);
+        } catch (error) {
+            console.log(error);
+        }
+    });
+
+    test('POST /student/update/:id: student record update', async () => {
+        try {
+            let recordId = 'tkoBttKtCSV5iREyk';
+            let listOfRandomStudent = [
+                {
+                    firstname: 'Miracle',
+                    lastname: 'Adams'
+                }, {
+                    firstname: 'Cray',
+                    lastname: 'James'
+                }
+            ];
+
+            let selectedRecord = listOfRandomStudent[Math.round(Math.random() * (listOfRandomStudent.length))];
+            const response = await request(app).post(`/student/update/${recordId}`).send(selectedRecord);
+            expect(response.statusCode).toBe(200);
+            expect(response.body.updatedId).toBe(recordId);
+        } catch (error) {
+            console.log(error);
+        }
+    });
 });
-
-
-
 
 
 // This includes all tests for getAllItemsHandler

@@ -154,7 +154,7 @@ const model = function() {
                 res.status(200).json({
                     statusCode: 200,
                     message: 'Student Record Updated Successfully',
-                    result
+                    updatedId: `${req.params.id}`
                 });
             }
         });
