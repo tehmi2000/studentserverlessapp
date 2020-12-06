@@ -16022,3 +16022,183 @@ Sat, 05 Dec 2020 21:49:46 GMT  [ERROR]: {
         }
     }
 }
+Sun, 06 Dec 2020 06:22:16 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Sun, 06 Dec 2020 06:22:19 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_HANDSHAKE_TWICE",
+            "fatal": false
+        }
+    }
+}
+Sun, 06 Dec 2020 06:22:19 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student/create",
+    "data": {
+        "action": "[POST]: Create Student Data",
+        "body": {
+            "firstname": "Testfirstname",
+            "lastname": "Testlastname",
+            "phone": "+123905678234",
+            "email": "testemail1234@somemail.com"
+        },
+        "log": null
+    }
+}
+Sun, 06 Dec 2020 06:22:20 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sun, 06 Dec 2020 06:22:20 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student/create",
+    "data": {
+        "action": "[POST]: Error connecting to MySQL",
+        "body": {
+            "firstname": "Testfirstname",
+            "lastname": "Testlastname",
+            "phone": "+123905678234",
+            "email": "testemail1234@somemail.com"
+        },
+        "log": {
+            "code": "ER_NOT_SUPPORTED_AUTH_MODE",
+            "errno": 1251,
+            "sqlMessage": "Client does not support authentication protocol requested by server; consider upgrading MySQL client",
+            "sqlState": "08004",
+            "fatal": true
+        }
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR",
+            "fatal": false
+        }
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR",
+            "fatal": false
+        }
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student?limit=2",
+    "data": {
+        "action": "[GET]: 2 Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR",
+            "fatal": false
+        }
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student?limit=2",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR",
+            "fatal": false
+        }
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student/update/tkoBttKtCSV5iREyk",
+    "data": {
+        "action": "[POST]: Update Student Data",
+        "body": {
+            "firstname": "Miracle",
+            "lastname": "Adams"
+        },
+        "log": null
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR",
+            "fatal": false
+        }
+    }
+}
+Sun, 06 Dec 2020 06:22:21 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student/update/tkoBttKtCSV5iREyk",
+    "data": {
+        "action": "[POST]: Error connecting to MySQL",
+        "body": {
+            "firstname": "Miracle",
+            "lastname": "Adams"
+        },
+        "log": {
+            "code": "PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR",
+            "fatal": false
+        }
+    }
+}
