@@ -43,7 +43,7 @@ const model = function() {
 			if(err) console.error(err);
 		});
         
-        if(options.logToConsole === true && logContent !== null) console.error(logContent.message);
+        // if(options.logToConsole === true && logContent !== null) console.error(logContent.message);
     };
 
     let connectToDB = function (shouldLogError) {

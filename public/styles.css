@@ -59,46 +59,6 @@ h3{
     font-weight: 500;
 }
 
-.red{
-    color: red;
-}
-
-.bg-red{
-    background-color: red;
-}
-
-.green{
-    color: green;
-}
-
-.bg-green{
-    background-color: green;
-}
-
-.yellow{
-    color: yellow;
-}
-
-.bg-yellow{
-    background-color: yellow;
-}
-
-.blue{
-    color: dodgerblue;
-}
-
-.bg-blue{
-    background-color: dodgerblue;
-}
-
-.orange{
-    color: orange;
-}
-
-.bg-orange{
-    background-color: rgb(255, 153, 0);
-}
-
 .icon{
     color: white;
 }
@@ -270,7 +230,7 @@ footer{
     /* border: 1px solid; */
     width: 100%;
     min-width: 300px;
-    min-height: 10rem;
+    min-height: 28rem;
     margin: 3.5rem auto 0;
     padding: 2rem 3rem;  
     font-size: 1.2rem;
@@ -285,6 +245,10 @@ footer .top, footer .top *{
 footer .top{
     flex-wrap: wrap;
     margin: 1rem 2rem 2rem;
+}
+
+footer .top > *:nth-child(2){
+    flex-wrap: wrap;
 }
 
 footer .top > *:nth-child(2) > *{

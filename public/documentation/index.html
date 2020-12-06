@@ -22,7 +22,7 @@
             <p class="brief-text">
                 <ol>
                     <li>Replace <i class="highlight">...</i> with <i class="highlight">https://j8etyxmihl.execute-api.us-east-1.amazonaws.com/production</i></li>
-                    <li>Strings wrapped in square brackets <i class="highlight">[...]</i> are optional. Not adding them would not affect the API in any way.</li>
+                    <li>Strings wrapped in square brackets <i class="highlight">[...]</i> are optional. Not including optional parameters would not result in errors.</li>
                 </ol>
             </p>
         </div>
@@ -42,7 +42,7 @@
                     <pre>
     <i class="comment">// Using Javascript Fetch API</i>
 
-    fetch(".../student?limit=2").then(async response => {
+    fetch(<i class="string-value">".../student?limit=2"</i>).then(async response => {
         let data = await response.json();
         console.log(data) <i class="comment">// returns array with two objects</i>
     }).catch(error => {
@@ -50,7 +50,7 @@
     });
 
     <i class="comment">// Another example</i>
-    fetch('.../student').then(async response => {
+    fetch(<i class="string-value">'.../student'</i>).then(async response => {
         let data = await response.json();
         console.log(data) <i class="comment">// returns array with all student record in database</i>
     }).catch(error => {
@@ -78,17 +78,17 @@
     let apiOptions = {
         method: 'POST',
         body: JSON.stringify({
-            firsname: 'John', 
-            lastname: 'Cena', 
-            email: 'youremail@email.com', 
-            phone: '0123456789'
+            firsname: <i class="string-value">'John'</i>, 
+            lastname: <i class="string-value">'Cena'</i>, 
+            email: <i class="string-value">'youremail@email.com'</i>, 
+            phone: <i class="string-value">'0123456789'</i>
         }),
         headers: {
-            'Content-Type': 'application/json;charset=utf8'
+            'Content-Type': <i class="string-value">'application/json;charset=utf8'</i>
         }
     };
 
-    fetch('.../student/create', apiOptions).then(async response => {
+    fetch(<i class="string-value">'.../student/create'</i>, apiOptions).then(async response => {
         let data = await response.json();
         console.log(data) <i class="comment">// returns array with two objects</i>
     }).catch(error => {
@@ -115,31 +115,31 @@
 
     let studentRecords = [
         {
-            uuid: 'tHsisWesxbrTTeQs',
-            firstname: 'James',
-            lastname: 'Sylvester',
-            email: 'jamiesyl@gmail.com',
-            phone: '+2349009660534'
+            uuid: <i class="string-value">'tHsisWesxbrTTeQs'</i>,
+            firstname: <i class="string-value">'James'</i>,
+            lastname: <i class="string-value">'Sylvester'</i>,
+            email: <i class="string-value">'jamiesyl@gmail.com'</i>,
+            phone: <i class="string-value">'+2349009660534'</i>
         }, {
-            uuid: 'tHseaFesxbrTYeQs',
-            firstname: 'Fredd',
-            lastname: 'Harden',
-            email: 'hardened@ymail.com',
-            phone: '+2349009660534'
+            uuid: <i class="string-value">'tHseaFesxbrTYeQs'</i>,
+            firstname: <i class="string-value">'Fredd'</i>,
+            lastname: <i class="string-value">'Harden'</i>,
+            email: <i class="string-value">'hardened@ymail.com'</i>,
+            phone: <i class="string-value">'+2349009660534'</i>
         }, {
-            uuid: 'tHscsUesvbrOOeQs',
-            firstname: 'Christian',
-            lastname: 'Bolton',
-            email: 'chrisB@gmail.com',
-            phone: '+2349009660534'
+            uuid: <i class="string-value">'tHscsUesvbrOOeQs'</i>,
+            firstname: <i class="string-value">'Christian'</i>,
+            lastname: <i class="string-value">'Bolton'</i>,
+            email: <i class="string-value">'chrisB@gmail.com'</i>,
+            phone: <i class="string-value">'+2349009660534'</i>
         }
     ];
 
     let apiOptions = {
-        method: 'DELETE'
+        method: <i class="string-value">'DELETE'</i>
     };
 
-    fetch('.../student/delete/tHscsUesvbrOOeQs', apiOptions).then(async response => { <i class="comment">// Deletes Christian Bolton's record</i>
+    fetch(<i class="string-value">'.../student/delete/tHscsUesvbrOOeQs</i>', apiOptions).then(async response => { <i class="comment">// Deletes Christian Bolton's record</i>
         let data = await response.json();
         console.log(data) <i class="comment">// returns operation result object</i>
     }).catch(error => {
@@ -166,31 +166,31 @@
 
     let studentRecords = [
         {
-            uuid: 'tHsisWesxbrTTeQs',
-            firstname: 'James',
-            lastname: 'Sylvester',
-            email: 'jamiesyl@gmail.com',
-            phone: '+2349009660534'
+            uuid: <i class="string-value">'tHsisWesxbrTTeQs'</i>,
+            firstname: <i class="string-value">'James'</i>,
+            lastname: <i class="string-value">'Sylvester'</i>,
+            email: <i class="string-value">'jamiesyl@gmail.com'</i>,
+            phone: <i class="string-value">'+2349009660534'</i>
         }, {
-            uuid: 'tHseaFesxbrTYeQs',
-            firstname: 'Fredd',
-            lastname: 'Harden',
-            email: 'hardened@ymail.com',
-            phone: '+2349009660534'
+            uuid: <i class="string-value">'tHseaFesxbrTYeQs'</i>,
+            firstname: <i class="string-value">'Fredd'</i>,
+            lastname: <i class="string-value">'Harden'</i>,
+            email: <i class="string-value">'hardened@ymail.com'</i>,
+            phone: <i class="string-value">'+2349009660534'</i>
         }, {
-            uuid: 'tHscsUesvbrOOeQs',
-            firstname: 'Christian',
-            lastname: 'Bolton',
-            email: 'chrisB@gmail.com',
-            phone: '+2349009660534'
+            uuid: <i class="string-value">'tHscsUesvbrOOeQs'</i>,
+            firstname: <i class="string-value">'Christian'</i>,
+            lastname: <i class="string-value">'Bolton'</i>,
+            email: <i class="string-value">'chrisB@gmail.com'</i>,
+            phone: <i class="string-value">'+2349009660534'</i>
         }
     ];
 
     let apiOptions = {
-        method: 'DELETE'
+        method: <i class="string-value">'DELETE'</i>
     };
 
-    fetch('.../student/delete/tHscsUesvbrOOeQs', apiOptions).then(async response => { <i class="comment">// Deletes Christian Bolton's record</i>
+    fetch(<i class="string-value">'.../student/delete/tHscsUesvbrOOeQs'</i>, apiOptions).then(async response => { <i class="comment">// Deletes Christian Bolton's record</i>
         let data = await response.json();
         console.log(data) <i class="comment">// returns operation result object</i>
     }).catch(error => {
@@ -209,12 +209,12 @@
                 <span class="rows" style="align-items: center;">Email Address: <a href="mailto:admissions@ghschools.online">tehmi2000@gmail.com</a></span>
                 <span class="rows" style="align-items: center;">Phone: <a href="tel:+2349059620514">+234 905 962 0514</a> (Main line)</span>
                 <span class="rows" style="align-items: center;">Alt. 1: <a href="tel:+2348021444047">+234 802 144 4047</a></span>
-                <span class="rows" style="align-items: center;">LinkedIn: <a href="mailto:admissions@ghschools.online">admissions@ghschools.online</a></span>
+                <span class="rows" style="align-items: center;">LinkedIn: <a href="https://www.linkedin.com/in/temiloluwa-ogunbanjo-719731168">Temiloluwa Ogunbanjo</a></span>
             </div>
         </div>
         <div class="bottom cols">
             <span>Student API 2020, All rights reserved</span>
-            <span class="rows" style="align-items: center;">Powered by<a href="https://learnira.org">Serverless</a></span>
+            <span class="rows" style="align-items: center;">Powered by<a href="https://app.serverless.com">Serverless</a></span>
         </div>
     </footer>
 </body>

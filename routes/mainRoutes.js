@@ -90,7 +90,8 @@ const model = function() {
 
         // INSERT STUDENT DATA INTO DATABASE
         let userData = req.body;
-        let mySQLquery = `INSERT INTO student (uuid, firstname, lastname, email, phone) VALUES ('${genHex(16)}','${formatName(userData.firstname) || 'John'}', '${formatName(userData.lastname) || 'Doe'}', '${userData.email || 'example@email.com'}', '${userData.phone || '+1234567890'}')`;
+        let uuid = `${genHex(16)}`;
+        let mySQLquery = `INSERT INTO student (uuid, firstname, lastname, email, phone) VALUES ('${uuid}','${formatName(userData.firstname) || 'John'}', '${formatName(userData.lastname) || 'Doe'}', '${userData.email || 'example@email.com'}', '${userData.phone || '+1234567890'}')`;
 
         // RUN MYSQL QUERY
         connectToDB().query(mySQLquery, (err, result) => {
@@ -102,7 +103,8 @@ const model = function() {
             }else if(result){
                 // RETURN RESULT
                 res.status(200).json({
-                    message: result
+                    message: 'Student record created',
+                    createdId: uuid
                 });
             }
         });

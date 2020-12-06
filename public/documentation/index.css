@@ -20,7 +20,7 @@ main{
     margin-left: 0.2rem;
     border-radius: 5px;
     padding: 0.2rem 0.8rem;
-    background-color: rgba(253, 133, 133, 0.6);
+    background-color: rgba(255, 182, 182, 0.6);
 }
 
 .insig{
@@ -74,7 +74,7 @@ main{
     text-transform: initial;
     font-size: 1.5rem !important;
     background-color: #3f3f40;
-    color: rgb(255, 230, 0);
+    color: #fff06d;
     padding: 2rem;
     border-radius: 5px;
     display: block;
@@ -84,12 +84,17 @@ main{
 }
 
 .page-section summary + .example-block pre{
-    line-height: 2;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 .page-section summary + .example-block .comment{
     font-style: italic;
     color: #8d8d8d;
+}
+
+.page-section summary + .example-block .string-value{
+    color: #86d3ff;
 }
 
 @media only screen and (max-width:800px){
@@ -98,27 +103,7 @@ main{
         margin-top: 1rem;
     }
 
-    /* .page-section{
-        width: 85%;
+    .insig{
+        font-size: 1.5rem;
     }
-
-    .page-section-head{
-        top: 0;
-        position: sticky;
-        padding: 1rem 3rem;
-        width: 100%;
-        margin: 0 auto;
-        margin-bottom: 1rem;
-        border-radius: 0;
-        z-index: +200;
-    }
-
-    .page-section-head h2{
-        font-size: 1.6rem;
-        color: #d80d0d;
-    }
-
-    .page-section h2{
-        font-size: 1.8rem !important;
-    } */
 }
