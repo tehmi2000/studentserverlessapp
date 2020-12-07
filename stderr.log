@@ -16202,3 +16202,23 @@ Sun, 06 Dec 2020 06:22:21 GMT  [ERROR]: {
         }
     }
 }
+Mon, 07 Dec 2020 03:35:42 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}
+Mon, 07 Dec 2020 03:35:49 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/docs",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Full API Documentation",
+        "body": {},
+        "log": null
+    }
+}

@@ -4,49 +4,22 @@ const { connectToDB } = require('../../configuration/appConfig');
 // Import all functions from server
 const { app } = require('../../app');
 
-describe("Test API Documentation Routes", () => {
-
-    it('GET / is working', async () => {
-        try {
-            const response = await request(app).get(`/`);
-            expect(response.statusCode).toBeGreaterThan(199);
-            expect(response.statusCode).toBeLessThan(400);
-            expect(response.headers['content-type']).toBe('text/html; charset=UTF-8');
-        } catch (error) {
-            // done(error);
-            console.log(error);
-        }
-    });
-
-    it('GET /docs is working', async () => {
-        try {
-            const response = await request(app).get(`/docs`);
-            expect(response.statusCode).toBeGreaterThan(199);
-            expect(response.statusCode).toBeLessThan(400);
-            expect(response.headers['content-type']).toBe('text/html; charset=UTF-8');
-        } catch (error) {
-            // done(error);
-            console.log(error.message);
-        }
-    });
-});
-
-
 describe("Test Student API Endpoints", () => {
     let mySQLConnection = null;
 
-    afterAll(function(){
+    beforeAll(function () {
+        mySQLConnection = connectToDB(false);
+    });
+
+    afterAll(done => {
         if (mySQLConnection !== null && mySQLConnection !== undefined) {
-            mySQLConnection.close();
+            mySqlConnection.end((err => {
+                done(err);
+            }));
         }
     });
 
     it('MySQL client is available and working', () => {
-        try {
-            mySQLConnection = connectToDB(false);
-        } catch (error) {
-            console.error(error.message);
-        }
         expect(mySQLConnection).not.toBeNull();
     });
 
@@ -105,7 +78,8 @@ describe("Test Student API Endpoints", () => {
 
             let selectedRecord = listOfRandomStudent[Math.round(Math.random() * (listOfRandomStudent.length))];
             const response = await request(app).post(`/student/update/${recordId}`).send(selectedRecord);
-            expect(response.statusCode === 200 && response.body.updatedId === recordId).toBeTruthy();
+            expect(response.statusCode).toBe(200);
+            expect(response.body.updatedId).toBe(recordId);
         } catch (error) {
             console.log(error);
         }
