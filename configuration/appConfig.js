@@ -5,7 +5,7 @@ const model = function() {
     const mysql = require("mysql");
     const mySqlConnection = mysql.createConnection(dbConfig);
     
-    const PORT = 51000;
+    const PORT = 3000;
     const log = function(logContent, options) {
         // LOG DISPLAY CONFIGS
         let defaultOption = {
@@ -53,7 +53,8 @@ const model = function() {
                 log(err, {logToConsole: shouldLogError});
                 return;
             }
-            console.info("Connection to MySQL database was successful!");
+            
+            else console.info("Connection to MySQL database was successful!");
         });
         
         return mySqlConnection;

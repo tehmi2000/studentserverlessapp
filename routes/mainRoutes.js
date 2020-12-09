@@ -61,9 +61,9 @@ const model = function() {
         // RETRIEVE STUDENT DATA FROM DATABASE
         let limit = req.query.limit;
         let mySQLquery = `SELECT uuid, firstname, lastname, email, phone FROM student ${(limit && limit > 0)? 'LIMIT ' + limit : ''}`;
-        
+        let mySqlConnection = connectToDB();
         // RUN MYSQL QUERY
-        connectToDB().query(mySQLquery, (err, result) => {
+        mySqlConnection.query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
                 log(err, {...options, logType: 'ERROR', requestDescription: 'Error connecting to MySQL'});
@@ -71,9 +71,7 @@ const model = function() {
 
             }else if(result){
                 // RETURN RESULT
-                res.status(200).json({
-                    message: result
-                });
+                res.status(200).json(result);
             }
         });
     });
@@ -90,11 +88,12 @@ const model = function() {
 
         // INSERT STUDENT DATA INTO DATABASE
         let userData = req.body;
-        let uuid = `${genHex(16)}`;
-        let mySQLquery = `INSERT INTO student (uuid, firstname, lastname, email, phone) VALUES ('${uuid}','${formatName(userData.firstname) || 'John'}', '${formatName(userData.lastname) || 'Doe'}', '${userData.email || 'example@email.com'}', '${userData.phone || '+1234567890'}')`;
+        let studentId = `${genHex(16)}`;
+        let mySQLquery = `INSERT INTO student (uuid, firstname, lastname, email, phone) VALUES ('${studentId}','${formatName(userData.firstname) || 'John'}', '${formatName(userData.lastname) || 'Doe'}', '${userData.email || 'example@email.com'}', '${userData.phone || '+1234567890'}')`;
+        let mySqlConnection = connectToDB();
 
         // RUN MYSQL QUERY
-        connectToDB().query(mySQLquery, (err, result) => {
+        mySqlConnection.query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
                 log(err, {...options, logType: 'ERROR', requestDescription: 'Error connecting to MySQL'});
@@ -104,7 +103,7 @@ const model = function() {
                 // RETURN RESULT
                 res.status(200).json({
                     message: 'Student record created',
-                    createdId: uuid
+                    createdId: studentId
                 });
             }
         });
@@ -121,6 +120,7 @@ const model = function() {
         log(null, options);
 
         let userData = req.body;
+        let studentId = req.params.id;
 
         let buildQuery = function(data){
             let sqlquery = '';
@@ -137,15 +137,16 @@ const model = function() {
                 return `${columnList[index]}='${columnValue}'`;
             });
 
-            sqlquery = `UPDATE student SET ${valueList.join(', ')} WHERE uuid='${req.params.id}'`;
+            sqlquery = `UPDATE student SET ${valueList.join(', ')} WHERE uuid='${studentId}'`;
             return sqlquery;
         };
 
         // CREATE MYSQL QUERY FROM DATA
         let mySQLquery = buildQuery(userData);
+        let mySqlConnection = connectToDB();
 
         // UPDATE STUDENT DATA IN DATABASE
-        connectToDB().query(mySQLquery, (err, result) => {
+        mySqlConnection.query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
                 log(err, {...options, logType: 'ERROR', requestDescription: 'Error connecting to MySQL'});
@@ -154,9 +155,8 @@ const model = function() {
             }else if(result){
                 // RETURN RESULT
                 res.status(200).json({
-                    statusCode: 200,
                     message: 'Student Record Updated Successfully',
-                    updatedId: `${req.params.id}`
+                    updatedId: `${studentId}`
                 });
             }
         });
@@ -175,9 +175,10 @@ const model = function() {
         // DELETE STUDENT DATA FROM DATABASE
         let studentId = req.params.id;
         let mySQLquery = `DELETE FROM student WHERE uuid='${studentId}'`;
+        let mySqlConnection = connectToDB();
 
         // RUN MYSQL QUERY
-        connectToDB().query(mySQLquery, (err, result) => {
+        mySqlConnection.query(mySQLquery, (err, result) => {
             if (err) {
                 // LOG ERROR AND RETURN ERROR
                 log(err, {...options, logType: 'ERROR', requestDescription: 'Error connecting to MySQL'});
@@ -186,9 +187,15 @@ const model = function() {
             }else if(result){
                 // RETURN RESULT
                 res.status(200).json({
-                    message: result
+                    message: 'Student Record Updated Successfully',
+                    deletedId: `${studentId}`
                 });
             }
+
+            // Close Connection 
+            mySqlConnection.end(err => {
+                log(err, {...options, logType: 'ERROR', requestDescription: '/student/delete: Error occurred while closing connection'});
+            });
         });
     });
     

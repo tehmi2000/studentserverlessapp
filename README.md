@@ -9,7 +9,7 @@ This project includes the following files and folders:
 - routes - Route module used by express to serve endpoints.
 - \_\_tests__ - Unit tests for application.
 - app.js - Exports a serverless express app handler and the express app itself.
-- server.js - Contains code for hosting the express app locally without serverless.
+- server.js - Contains code for launching the express app normally with `node server.js` on the console (cmd, bash...).
 
 ## About the application
 
@@ -41,8 +41,14 @@ To view a complete list of the application's API endpoint, navigate to the **API
 Requirements:
 
 * Node.js - [Install Node.js 10](https://nodejs.org/en/), including the npm package management tool.
+* XAMPP (or any local MySQL server you can find) - [Install XAMPP](https://www.apachefriends.org/download.html), including the npm package management tool.
 
-Tests are defined in the \_\_tests__ folder in this project. Use `npm` to install the [Jest test framework](https://jestjs.io/) and run unit tests.
+Configurations:
+
+* Use the `localConfigValues` defined in configuration/dbConfig.js file when performing API test.
+* Setup your MySQL database and tables by running the MySQL queries defined in configuration/setup.sql file in your local MySQL application.
+
+All tests are defined in the \_\_tests__ folder in this project. Use `npm` to install the [Jest test framework](https://jestjs.io/) and run unit tests.
 
 ```bash
 my-application$ npm install
