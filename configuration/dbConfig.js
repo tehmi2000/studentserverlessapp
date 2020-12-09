@@ -16,7 +16,7 @@ const model = () => {
     	database: "mystudentdb"
 	};
 
-    return localConfigValues;
+    return configValues;
 }
 
 module.exports = model();

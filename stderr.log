@@ -38417,3 +38417,49 @@ Wed, 09 Dec 2020 11:46:08 GMT  [ERROR]: {
         "body": {}
     }
 }
+Wed, 09 Dec 2020 12:08:57 GMT  [INFO]: {
+    "logType": "INFO",
+    "url": "/student",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: All Student Data",
+        "body": {},
+        "log": null
+    }
+}
+Wed, 09 Dec 2020 12:08:57 GMT  [INFO]: {
+    "logType": "INFO",
+    "IP": null,
+    "url": null,
+    "data": {
+        "action": "[GET]: No description for this request",
+        "body": null,
+        "log": {
+            "errno": "ENOTFOUND",
+            "code": "ENOTFOUND",
+            "syscall": "getaddrinfo",
+            "hostname": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "host": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "fatal": true
+        }
+    }
+}
+Wed, 09 Dec 2020 12:08:57 GMT  [ERROR]: {
+    "logType": "ERROR",
+    "url": "/student",
+    "application": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:83.0) Gecko/20100101 Firefox/83.0",
+    "data": {
+        "action": "[GET]: Error connecting to MySQL",
+        "body": {},
+        "log": {
+            "errno": "ENOTFOUND",
+            "code": "ENOTFOUND",
+            "syscall": "getaddrinfo",
+            "hostname": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "host": "mystudentdb.csof68gm4mi1.us-east-1.rds.amazonaws.com",
+            "port": 3306,
+            "fatal": true
+        }
+    }
+}
